@@ -1,0 +1,140 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;/*como va a calcular el tamano del element0 en base a su margin y padding*/
+    font-family: 'Lato', sans-serif;
+    
+}
+
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    height: 100vh;
+    background: url(../img/fondoA.jpg) no-repeat center/cover;
+
+}
+#marco{
+    width: 1000px;
+    min-height: 90vh;
+    background-color: rgb(212, 125, 56);
+    /*border: 3px solid black;*/
+    border-radius: 20px;
+    float: center;
+    align-items: center;
+    justify-content: center;
+}
+
+::placeholder {
+    padding-left: 20px;
+}
+
+header h1{
+    margin: 0.5em;
+    color:rgb(252, 252, 120);
+    font-weight: bolder;
+    text-shadow: 1px 1px 2px grey;
+}
+header button{
+    background: white;
+    border: none;
+    border-radius: 10px;
+    box-shadow: 2px 2px 5px black;
+}
+
+header button img{
+    width: 43px;
+    
+        
+}
+
+header nav{
+    margin-left: 12px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: center;
+    
+
+}
+
+#nuevaTarea, #nuevaDescripcion {
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-size: large;
+    line-height: 2.5em;
+    width: 250px;
+    
+
+}
+#nuevaDescripcion{
+    width: 650px;
+}
+
+
+#tablero{
+    display: flex;
+    flex-direction: row;
+    flex-wrap:nowrap;
+    background: url(../img/tablero.JPG) no-repeat center;
+    max-width: 1000px;
+    min-height: 750px; 
+   
+}
+
+
+#todoList, #checkedList{
+width: 500px;    
+margin-top: 180px; 
+margin-left: 60px;
+display: flex;
+flex-direction:row;
+flex-wrap: wrap;
+
+}
+
+
+.tarea,.tarea1,.tarea2,.tarea3,.tarea4{
+    display: flex;          
+    flex-direction: column;               
+    justify-content:start;
+    position: relative;
+    width: 180px;
+    height: 200px;
+    margin-right: 15px;
+    border: 2px;
+    background-color: rgb(252, 252, 120);
+    box-shadow: 5px 5px 15px black;
+    text-align: left;
+}
+
+.tituloTarea, .descripcion{ 
+   padding-top: 1px;
+   padding-left: 15px;
+  
+}
+
+
+.checked, .edit, .delete{
+    background: none;
+    position: absolute;
+    left: 138px;
+    width: 40px;
+    bottom: 2px;          
+    border: none;
+    box-shadow: 2px 2px 5px black;
+}
+
+.edit{
+    left:99px;
+}
+
+.delete{
+    left: 2px;
+}
+
+.checked img, .edit img, .delete img{
+    width: 30px;
+    
+    
+}
