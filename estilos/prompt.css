@@ -1,0 +1,29 @@
+.prompt{
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    margin: auto;
+    width: 25em;
+    height: 8em;
+    background-color: aqua;
+    border: 5px solid black;
+    border-radius: 10px;
+
+
+}
+
+.prompt button{
+    width: 40%;
+    font-size: 2em;
+    background-color: rgba(137, 43, 226, 30%);
+    border: 3px solid purple;
+    border-radius: 15px;
+    margin: .2em .5em 0 0;
+    transition: all .2s;
+}
+
+.prompt button:hover{
+  transform: scale(.9);
+}
