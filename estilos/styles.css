@@ -1,3 +1,6 @@
+@import url(prompt.css);
+
+
 *{
     margin: 0;
     padding: 0;
@@ -26,9 +29,7 @@ body{
     justify-content: center;
 }
 
-::placeholder {
-    padding-left: 20px;
-}
+
 
 header h1{
     margin: 0.5em;
@@ -36,6 +37,11 @@ header h1{
     font-weight: bolder;
     text-shadow: 1px 1px 2px grey;
 }
+
+textarea::placeholder {
+    text-align: center;
+}
+
 header button{
     background: white;
     border: none;
@@ -79,6 +85,7 @@ header nav{
     background: url(../img/tablero.JPG) no-repeat center;
     max-width: 1000px;
     min-height: 750px; 
+    position: relative;
    
 }
 
