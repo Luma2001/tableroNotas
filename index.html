@@ -4,44 +4,44 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./estilos/styles.css">
-    <script src="./js/reset.js" defer></script>
-    <script src="./js/crearTarea.js" defer></script>
+    <script src="./js/utils.js" defer></script>
+    <script src="./js/nota.js" defer></script>
     <script src="./js/script.js" defer></script>
     <title>Tablero de Notas</title>
 </head>
 
 <body>
-    <div id="marco">
+   <div id="marco">
         
-    <header>
-        <h1>Tablero de Notas</h1>
-        <nav>
-            <div><textarea name="titulo" id="nuevaTarea" cols="10" rows="1" placeholder="Título Tarea"></textarea><textarea name="descripcion" id="nuevaDescripcion" cols="50" rows="1" placeholder="Descripción breve de tarea"></textarea></div>
-            <div><button id="agregar" onclick="agregarTarea()"><img src="./iconos/add.png" alt="add task"></button></div>
-        </nav>
-    </header>
+        <header>
+            <h1>Tablero de Notas</h1>
+            <nav>
+                <div><textarea name="titulo" id="nuevaTarea" cols="10" rows="1" placeholder="Título Tarea"></textarea><textarea name="descripcion" id="nuevaDescripcion" cols="50" rows="1" placeholder="Descripción breve de tarea"></textarea></div>
+                <div><button id="agregar" onclick="nota.agregar()"><img src="./iconos/add.png" alt="add task"></button></div>
+            </nav>
+        </header>
 
-    <main>
+        <main>
+            <section id="tablero">
+                <div id="estadoNotas">
+                    <img class="imgTitulo" src="./img/tituloToDoList.JPG" alt="TO DO LIST">
+                    <img class="imgTitulo" src="./img/tituloCheckedList.JPG" alt="CHECKED LIST">
+                </div>
+                <div id="contenedorNotas">
+                    <div id="todoList"></div>
+                    <div id="checkedList"></div>
+                </div>
+            </section>
+            <section id="historial">
+                <div>
+                    <h1>Historial Tareas Realizadas</h1>
+                    <ul id="lista">   
+                    </ul>
+                </div>
+            </section>
+        </main>
 
-        <section id="tablero">
-
-            <div id="todoList"></div>
-            
-            <div id="checkedList">
-               <!-- <div class="tarea">
-                    <h4 class="tituloTarea">Titulo</h4>
-                    <p class="descripcion">Descripción</p>
-                    <div>
-                        <button id="checked" ><img src="./iconos/check.png" alt="check task"></button>
-                    </div>
-                </div>-->
-                
-            </div>
-        </section>
-
-        <section id="historialTareas"></section>
-    </main>
-</div>
-    <footer></footer>
+  </div><!--fin id marco-->
+        <footer></footer>
 </body>
 </html>
