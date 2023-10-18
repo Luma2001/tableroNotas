@@ -1,21 +1,21 @@
 
 const util = {
+    //reseteo textareas
     reset:()=>{
         document.querySelector("#nuevaTarea").value="";
         document.querySelector("#nuevaDescripcion").value=""; 
     },
-/*
-    guardar: ()=>{
-        localStorage.clear();
+    //guardo en localstorage
+    guardarHistorial:()=>{
+        const li = document.querySelector('item').value;
+        console.log("Valor="+item.value);
+        let itemsArray =
+            localStorage.getItem('items')?JSON.parse(localStorage.getItem('items')):[];
+        itemsArray.push(li.value);
+        console.log("Valor item:" + li.value);
+        localStorage.setItem('items',JSON.stringify(itemsArray));
 
-        //llamo a todas las notas del historial
-        const listaNotas = document.querySelectorAll('.tareaArchivadas');
-
-        //Creo un arreglo para guardar el local storage
-        const datosNotas=[];
-
-        //Recorro los elementos y obtengo valores
-        const a
-
-    }*/
+    },
+   
+    
 }

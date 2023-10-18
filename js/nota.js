@@ -26,7 +26,9 @@ const nota = {
             //Lo agrego al toDoContainer
             toDoContainer.append(tareaNueva);
             util.reset();
-        
+            console.log(tareaNueva.childNodes);
+
+           
         }    
         
     },  
@@ -36,8 +38,11 @@ const nota = {
            
         tareaNueva.setAttribute("id",idTarea);
         tareaNueva.classList.add('tarea');
-        tareaNueva.innerHTML = `<h4 class="tituloTarea">${titulo.toUpperCase()}</h4>
+        tareaNueva.innerHTML = `<div class="clip"><img src="./img/clip.png/" alt="°"></div>
+                                <h4 class="tituloTarea">${titulo.toUpperCase()}</h4>
                                 <p class="descripcion">${descripcion}</p>
+                                
+                        
                                 <div class="contenedorBotones">
                                     <button class="delete" onclick="nota.borrar(${idTarea})"><img src="./iconos/borrar.png" alt="delete task"> </button>
                                     <button class="edit" onclick="nota.editar(${idTarea})"><img src="./iconos/edit.png" alt="edit task"></button>   
@@ -57,7 +62,7 @@ const nota = {
             alert("Genial")
         }
 
-    },
+    }, 
 
     editar: (id) => {
         //1)llamamos la nota que queremos editar
@@ -81,7 +86,7 @@ const nota = {
 
         //5) Creando el elemento textarea para el titulo y le asigno un id
             const titulo = document.createElement('textarea');
-            titulo.id = 'editarTarea';
+            titulo.id = 'editarTitulo';
 
         //6) creando el elemento textarea para la descripcion y le asigno un id
             const descripcion = document.createElement('textarea');
@@ -89,11 +94,12 @@ const nota = {
 
         //7) Asigno textos de titulo y descripcion que quiero editar al textarea correspondiente
             //a)copio texto contenido en h4 en titulo
-            let texto = document.createTextNode(notaParaEditar.childNodes[0].textContent);//Especificamente llama el texto contenido en h4
+            titulo.textContent=notaParaEditar.childNodes[2].textContent
+            //let texto = document.createTextNode(notaParaEditar.childNodes[2].textContent);//Especificamente llama el texto contenido en h4
             //b)agrego este texto en titulo
-            titulo.appendChild(texto);
+           // titulo.appendChild(texto);
             //c)copio texto contenido en p en descripcion
-            let detalle = document.createTextNode(notaParaEditar.childNodes[2].textContent);//especificamente llamo el texto contenido en p
+            let detalle = document.createTextNode(notaParaEditar.childNodes[4].textContent);//especificamente llamo el texto contenido en p
             //d)agrego este texto en descripcion
             descripcion.appendChild(detalle);
 
@@ -110,12 +116,12 @@ const nota = {
         
         //11)Creo un eventListener para agregar acciones al btnAceptar
             btnAceptar.addEventListener('click', ()=>{
-                //a)capturo las modificacione en el titulo y descripcion
-                const nuevoTitulo = document.getElementById('editarTarea');
+                //a)capturo las modificaciones en el titulo y descripcion
+                const nuevoTitulo = document.getElementById('editarTitulo');
                 const nuevaDescripcion = document.getElementById('editarDescripcion');
                 //b)Copio los valores capturados al titulo y descripcion original
-                notaParaEditar.childNodes[0].textContent=nuevoTitulo.value.toUpperCase();
-                notaParaEditar.childNodes[2].textContent=nuevaDescripcion.value;
+                notaParaEditar.childNodes[2].textContent=nuevoTitulo.value.toUpperCase();
+                notaParaEditar.childNodes[4].textContent=nuevaDescripcion.value;
                 //c)cierro panel editor    
                 const padre = panelEditor.parentNode;//llamo al padre de panelEditor
                 padre.removeChild(panelEditor);
@@ -124,32 +130,48 @@ const nota = {
     },
 
     terminar: (id)=>{
-        tareaCounter--;
+        
         const listo = document.getElementById(id);
         const padre= listo.parentNode;
         padre.removeChild(listo);
         
         if(padre==toDoContainer){
+            tareaCounter--;
             checkContainer.appendChild(listo);
         }    
             
         else if(padre==checkContainer){
            
             const panelHistorial = document.getElementById("lista");
-            //creo elemento donde voy a colocar los datos
-            const item = document.createElement('li');
-            item.className = 'tareaArchivadas';
-            //LLamo h4 y p 
-            const titulo = document.createElement('span');
-            let text = document.createTextNode(listo.childNodes[0].textContent + ": ");
-            titulo.appendChild(text);
-            const descripcion = document.createElement('span');
-            let texto = document.createTextNode(listo.childNodes[2].textContent+". ");
-            descripcion.appendChild(texto);
-            const fecha=new Date();
+            
+            console.log("nota capturada");
+            console.log(listo.childNodes);
+            
+            itemsArray.forEach(addTask);
+        //creo elemento donde voy a colocar los datos
+            function addTask(){
+                const item = document.createElement('li');
+                item.className = 'tareaArchivadas';
+                //LLamo h4, p  y creo fecha
+                const titulo = document.createElement('span');
+                titulo.textContent = listo.childNodes[2].textContent + ": ";
+                const descripcion = document.createElement('span');
+                descripcion.textContent=listo.childNodes[4].textContent+". ";
+                const fecha=new Date();
+                item.append(titulo,descripcion,fecha);
 
-            item.append(titulo,descripcion,fecha);
-            panelHistorial.appendChild(item);
+                panelHistorial.appendChild(item);
+            }
+                
+          //guardar en localStorage
+          itemsArray.push(item.innerText);
+          console.log("Valor item: " + itemsArray);
+          localStorage.setItem('historia',JSON.stringify(itemsArray));
+
+            
+           
+           
+        
         }    
     }
 

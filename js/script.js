@@ -1,4 +1,6 @@
 
+
+
 //Capturo los elementos que recibirán la respuesta
     const toDoContainer = document.querySelector("#todoList");
     const checkContainer = document.querySelector("#checkedList");
@@ -9,4 +11,8 @@
     let idTarea = 0; //contador usado para nombrar los ids de las tareas
 
 nota.agregar;
+    
+//recupero items de localStorage
+let itemsArray =
+    localStorage.getItem('historia')?JSON.parse(localStorage.getItem('historial')):[];
     
