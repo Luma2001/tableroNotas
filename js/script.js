@@ -12,7 +12,6 @@
 
 nota.agregar;
     
-//recupero items de localStorage
-let itemsArray =
-    localStorage.getItem('historia')?JSON.parse(localStorage.getItem('historial')):[];
-    
+
+   
+
