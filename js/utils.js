@@ -16,6 +16,13 @@ const util = {
         localStorage.setItem('items',JSON.stringify(itemsArray));
 
     },
-   
+
+    traerNotas : ()=>{
+      let notas =  ( localStorage.getItem('historia') == '' ||  localStorage.getItem('historia') == NaN)
+     || localStorage.getItem('historia') == null
+    ? [] : JSON.parse(localStorage.getItem('historial'));
+
+    
+    },
     
 }
