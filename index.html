@@ -10,14 +10,19 @@
     <title>Tablero de Notas</title>
 </head>
 
-<body>
+<body onload="nota.cargar()">
    <div id="marco">
         
         <header>
             <h1>Tablero de Notas</h1>
             <nav>
                 <div><textarea name="titulo" id="nuevaTarea" cols="10" rows="1" placeholder="Título Tarea"></textarea><textarea name="descripcion" id="nuevaDescripcion" cols="50" rows="1" placeholder="Descripción breve de tarea"></textarea></div>
-                <div><button id="agregar" onclick="nota.agregar()"><img src="./iconos/add.png" alt="add task"></button></div>
+                <div>
+                    <button id="agregar" onclick="nota.agregar()"><img src="./iconos/add.png" alt="add task"></button>
+                </div>
+                <div>
+                    <button id="btnClear" onclick="util.clear()">Limpiar Tablero y Historial</button>
+                </div>
             </nav>
         </header>
         
@@ -34,10 +39,8 @@
             </section>
             <section id="historial">
                 <div>
-                    <h1>Historial Tareas Realizadas</h1>
-                    <ul id="lista">   
-                        
-                    </ul>
+                    <h3>Historial Tareas Realizadas</h3>
+                    <ul id="lista"></ul>
                 </div>
             </section>
         </main>

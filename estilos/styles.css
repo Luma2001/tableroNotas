@@ -39,18 +39,6 @@ header h1{
     text-shadow: 1px 1px 2px grey;
 }
 
-header button{
-    background: white;
-    border: none;
-    border-radius: 10px;
-    box-shadow: 2px 2px 5px black;
-    margin: 0%;
-    margin-right: 10px;
-}
-
-header button img{
-    width: 40px;        
-}
 
 header nav{
     
@@ -70,8 +58,8 @@ textarea::placeholder {
 
 #nuevaTarea, #nuevaDescripcion {
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-    font-size: large;
-    line-height: 2.5em;
+    font-size: medium;
+    line-height: 2em;
     width: 30%;
     padding-left: 10px;
     
@@ -79,6 +67,36 @@ textarea::placeholder {
 
 #nuevaDescripcion{
     width: 60%;
+}
+
+header button{
+    background: white;
+    border: none;
+    border-radius: 10px;
+    box-shadow: 2px 2px 5px black;
+    margin: 0%;
+    margin-right: 10px;
+}
+
+header button img{
+    width: 40px;        
+}
+
+#btnClear{
+    object-fit: contain;
+    height: 50px;
+    width: 150px;
+    font-size: 1em;
+    background-color: rgb(252, 252, 108);
+    border: 3px solid black;
+    border-radius: 5px;
+    margin: .8em 0 .8em 0;
+    padding: 0.2em;
+    transition: all .2s;
+}
+
+#btnClear:hover {
+transform: scale(.9);
 }
 
 
@@ -189,11 +207,11 @@ justify-content: center;
 /*HISTORIAL*/
 #historial{
     position: relative;
-    top:20px;
+    top: 20px;
     margin: auto;
     bottom: 30px;
     width: 95%;
-    height: 200px;
+    height: 100px;
     color:#1c1a1a;
     background: white;
     overflow: hidden;
@@ -205,7 +223,7 @@ justify-content: center;
     object-fit: contain;
 }
 
-#historial h1{
+#historial h3{
     margin-top: 20px;
     margin-bottom: 20px;
 }
