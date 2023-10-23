@@ -1,28 +1,28 @@
 const nota = {
 
-    agregar:()=>{
-    
+    agregar: () => {
+
         //debugger;
 
         //Primero capturo los datos que el usuario ingresa
-            const titulo = document.querySelector("#nuevaTarea").value;
-            const descripcion = document.querySelector("#nuevaDescripcion").value; 
-        
-        if(tareaCounter==4){
+        const titulo = document.querySelector("#nuevaTarea").value;
+        const descripcion = document.querySelector("#nuevaDescripcion").value;
+
+        if (tareaCounter == 4) {
             alert("Lo siento, ha llegado al máximo de tareas pendientes, debe terminar una para agregar más.");
             util.reset();
-        
-        }else if((titulo==null || titulo=="") || (descripcion==null || descripcion=="") ){
-                    alert("ATENCIÓN!!! Falta información.")
+
+        } else if ((titulo == null || titulo == "") || (descripcion == null || descripcion == "")) {
+            alert("ATENCIÓN!!! Falta información.")
 
         }
 
-        else{ 
-            tareaCounter++; 
+        else {
+            tareaCounter++;
             idTarea++;
             //Creo un elemento
-            const tareaNueva =document.createElement('div');
-            nota.crear(tareaNueva,idTarea,titulo,descripcion);
+            const tareaNueva = document.createElement('div');
+            nota.crear(tareaNueva, idTarea, titulo, descripcion);
             //Lo agrego al toDoContainer
             toDoContainer.append(tareaNueva);
             util.reset();
@@ -33,10 +33,10 @@ const nota = {
         
     },  
 
-    crear: (tareaNueva,idTarea,titulo,descripcion)=>{
-           
-           
-        tareaNueva.setAttribute("id",idTarea);
+    crear: (tareaNueva, idTarea, titulo, descripcion) => {
+
+
+        tareaNueva.setAttribute("id", idTarea);
         tareaNueva.classList.add('tarea');
         tareaNueva.innerHTML = `<div class="clip"><img src="./img/clip.png/" alt="°"></div>
                                 <h4 class="tituloTarea">${titulo.toUpperCase()}</h4>
@@ -48,7 +48,9 @@ const nota = {
                                     <button class="edit" onclick="nota.editar(${idTarea})"><img src="./iconos/edit.png" alt="edit task"></button>   
                                     <button class="checked" onclick="nota.terminar(${idTarea})"><img src="./iconos/check.png" alt="check task"></button>
                                 </div>`;
-        
+
+
+
     },
 
     borrar:(id)=>{
@@ -129,31 +131,31 @@ const nota = {
 
     editar: (id)=>{
         //1)llamamos la nota que queremos editar
-            const notaParaEditar = document.getElementById(id);
-        
+        const notaParaEditar = document.getElementById(id);
+
         //Nota: console.log(notaParaEditar.childNodes);//pido un console.log de notaParaEditar para ver los nodos internos en un array.
        
         //2)llamo el id donde quiero que se abra el prompt   
-            const tablero = document.getElementById("tablero");
-        
+        const tablero = document.getElementById("tablero");
+
         //3)Creo un elemento donde voy a mostrar la nota que quiero editar    
-            const panelEditor = document.createElement('div'); //acá estamos creando un div
-        
+        const panelEditor = document.createElement('div'); //acá estamos creando un div
+
         //4)Le asigno una clase a panelEditor
-            panelEditor.className = 'prompt';
-        
+        panelEditor.className = 'prompt';
+
         //Nota: Mi panel editor debe mostrar: (9)
         //      un textarea para el titulo,(5)
         //      un textarea para la descripcion (6)
         //      y un boton aceptar, para confirmar los cambios.(8)
 
         //5) Creando el elemento textarea para el titulo y le asigno un id
-            const titulo = document.createElement('textarea');
-            titulo.id = 'editarTitulo';
+        const titulo = document.createElement('textarea');
+        titulo.id = 'editarTitulo';
 
         //6) creando el elemento textarea para la descripcion y le asigno un id
-            const descripcion = document.createElement('textarea');
-            descripcion.id = 'editarDescripcion';
+        const descripcion = document.createElement('textarea');
+        descripcion.id = 'editarDescripcion';
 
         //7) Asigno textos de titulo y descripcion que quiero editar al textarea correspondiente
             //a)Agrego texto contenido en h4 en titulo
