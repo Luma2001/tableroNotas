@@ -2,8 +2,6 @@ const nota = {
 
     agregar: () => {
 
-        //debugger;
-
         //Primero capturo los datos que el usuario ingresa
         const titulo = document.querySelector("#nuevaTarea").value;
         const descripcion = document.querySelector("#nuevaDescripcion").value;
@@ -14,7 +12,6 @@ const nota = {
 
         } else if ((titulo == null || titulo == "") || (descripcion == null || descripcion == "")) {
             alert("ATENCIÓN!!! Falta información.")
-
         }
 
         else {
@@ -35,7 +32,6 @@ const nota = {
 
     crear: (tareaNueva, idTarea, titulo, descripcion) => {
 
-
         tareaNueva.setAttribute("id", idTarea);
         tareaNueva.classList.add('tarea');
         tareaNueva.innerHTML = `<div class="clip"><img src="./img/clip.png/" alt="°"></div>
@@ -48,9 +44,6 @@ const nota = {
                                     <button class="edit" onclick="nota.editar(${idTarea})"><img src="./iconos/edit.png" alt="edit task"></button>   
                                     <button class="checked" onclick="nota.terminar(${idTarea})"><img src="./iconos/check.png" alt="check task"></button>
                                 </div>`;
-
-
-
     },
 
     borrar:(id)=>{
@@ -199,26 +192,25 @@ const nota = {
         if(padre==toDoContainer){
             tareaCounter--;
             checkContainer.appendChild(tareaLista);
-        } else {
-         
-        //creo elemento donde voy a colocar los datos para el panelHistorial
+        } else {//creo elemento donde voy a colocar los datos para el panelHistorial
 
                 //Creo elemento li y adjudico la clase tareaArchivadas
                 const item = document.createElement('li');
-                item.className = 'tareaArchivadas';
+                item.className = 'tareasArchivadas';
                 
                 //LLamo h4, p  y creo fecha
                 const titulo = document.createElement('span');
                 titulo.textContent = tareaLista.childNodes[2].textContent + ": ";
                 const descripcion = document.createElement('span');
-                descripcion.textContent=tareaLista.childNodes[4].textContent+". ";
+                descripcion.textContent=tareaLista.childNodes[4].textContent+". Finalizada el ";
                 const fecha = new Date().toLocaleString();
-                
+                const textContenido = document.createTextNode(titulo.innerText +": "+ descripcion.innerText  + fecha);
                 //Agrego titulo, descripcion y fecha como hijos de item
-                item.append(titulo,descripcion,fecha);
+                item.appendChild(textContenido);
+                console.log(item.childNodes);
 
                 //Agrego item al panelHistorial
-                panelHistorial.appendChild(item);
+                panelhistorial.appendChild(item);
             
                 //Guardo en localStorage    
                 nota.guardarHistorial();
@@ -247,20 +239,20 @@ const nota = {
     },
 
     guardarHistorial: ()=>{
-        const historial = document.querySelectorAll('.tareaArchivadas');
-        const arreglo =[];
+        const historial = document.querySelectorAll('.tareasArchivadas');
+        const array = [];
         for(let h of historial){
             const parent = h.parentNode;
             objeto = {
-                padre: parent.id,
-                texto: h.childNodes[0].textContent + h.childNodes[1].textContent + h.childNodes[2].textContent,
+                padre:parent.id,
+                texto:h.innerText
             }
-        arreglo.push(objeto);    
+            array.push(objeto);
         }
-        localStorage.setItem('historial', JSON.stringify(arreglo));            
+        localStorage.setItem('historial',JSON.stringify(array));
+
     },
 
-    
     cargar: ()=>{
         const notasCargadas = JSON.parse(localStorage.getItem('notas'))??[];
         notasCargadas.forEach((n) => {
@@ -273,7 +265,7 @@ const nota = {
         const historialCargado = JSON.parse(localStorage.getItem('historial'))??[];
         historialCargado.forEach((h) => {
             const item = document.createElement('li');
-            item.className = 'tareaArchivadas';
+            item.className = 'tareasArchivadas';
             const padre = document.getElementById(h.padre);
             item.textContent = h.texto;
             padre.appendChild(item);

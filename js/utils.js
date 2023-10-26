@@ -34,6 +34,9 @@ const util = {
                 
                 //b)cierro panelBorrar    
                 tablero.removeChild(panelClear);
+                toDoContainer.remove();
+                checkContainer.remove();
+                panelhistorial.remove();
                 localStorage.clear();
             })  
         
@@ -43,7 +46,6 @@ const util = {
                 tablero.removeChild(panelClear);
             })
 
-
     },
-    
+   
 }

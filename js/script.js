@@ -10,7 +10,5 @@
     let tareaCounter = 0; //contador de tareas para que no supere a 4
     let idTarea = 0; //contador usado para nombrar los ids de las tareas
 
-  
 
-//nota.agregar;
    
