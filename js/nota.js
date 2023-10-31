@@ -11,7 +11,38 @@ const nota = {
             util.reset();
 
         } else if ((titulo == null || titulo == "") || (descripcion == null || descripcion == "")) {
-            alert("ATENCIÓN!!! Falta información.")
+             const tablero = document.getElementById("tablero");
+        
+        //2)Creo un elemento donde voy a mostrar la nota que quiero editar    
+            const panelPrompt = document.createElement('div'); //acá estamos creando un div
+        
+        //3)Le asigno una clase a panelEditor
+            panelPrompt.className = 'prompt';
+        
+        //Nota: Mi panel editor debe mostrar:
+        //      mensaje: por ejemplo "ATENCIÓN!!! Falta información."
+        //      boton para ok
+       
+
+        //4) Creando el elemento párrafo y agrego mensaje
+            const mensaje = document.createElement('p');
+            mensaje.textContent ="ATENCIÓN!!! Falta información.";
+           
+        //5) Creando el boton aceptar y boton cancelar
+            const btnAceptar = document.createElement('button');
+            let texto = document.createTextNode('OK');
+            btnAceptar.appendChild(texto);
+
+           
+            panelPrompt.append(mensaje, btnAceptar);
+        
+        //7) Agrego panelEditor como hijo de tablero
+            tablero.appendChild(panelPrompt);
+
+            btnAceptar.addEventListener('click', ()=>{
+                    //b)cierro panelPrompt   
+                tablero.removeChild(panelPrompt);
+            })
         }
 
         else {
