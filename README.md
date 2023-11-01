@@ -47,10 +47,10 @@ https://pizarranotas.netlify.app/
 <h3>Desarrolladoras del Proyecto:</h3>
 
 [![caricorre](https://github.com/Luma2001/tableroNotas/assets/114626233/d7d7170e-f352-4b51-9dcc-423cb17a68fa)
-<br><sub>Carina Corredera</sub>](https://github.com/cari-corredera)
-
-
-
-[![Luma](https://github.com/Luma2001/tableroNotas/assets/114626233/5c47fe54-a2a5-4897-96a7-69f4366f0187)
+<br><sub>Carina Corredera</sub>](https://github.com/cari-corredera)[![Luma](https://github.com/Luma2001/tableroNotas/assets/114626233/5c47fe54-a2a5-4897-96a7-69f4366f0187)
 <br><sub>Luma2001</sub>](https://github.com/Luma2001) 
+
+
+
+
 
