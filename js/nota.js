@@ -238,7 +238,7 @@ const nota = {
                 const descripcion = document.createElement('span');
                 descripcion.textContent=tareaLista.childNodes[4].textContent+". Finalizada el ";
                 const fecha = new Date().toLocaleString();
-                const textContenido = document.createTextNode(titulo.innerText +": "+ descripcion.innerText  + fecha);
+                const textContenido = document.createTextNode(titulo.innerText + descripcion.innerText  + fecha);
                 //Agrego titulo, descripcion y fecha como hijos de item
                 item.appendChild(textContenido);
                 console.log(item.childNodes);

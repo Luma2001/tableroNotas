@@ -168,12 +168,14 @@ padding-bottom: 1em;
     justify-content:start;
     position: relative;
     width: 180px;
-    height: 180px;
+    min-height: 180px;
+    max-height: 210px;
+    
     margin-right: 10px;
     margin-top: 15px;
     margin-bottom: 5px;
     border: 2px;
-    word-wrap:break-word;
+    word-wrap:break-word; /*para evitar desbordamiento de texto en las notas*/
     background-color: rgb(252, 252, 120);
     box-shadow: 5px 5px 15px black;
     text-align: center;
