@@ -47,7 +47,11 @@ https://pizarranotas.netlify.app/
 <h3>Tecnologías Utilizadas:</h3>
 <p>HTML,CSS y JAVASCRIPT</p>
 <h3>Desarrolladoras del Proyecto:</h3>
-Carina Corredera
+
+[![114364057](https://github.com/Luma2001/tableroNotas/assets/114626233/9ad58cc2-dc78-4722-a0d6-5b1d5978a1ce)
+<br><sub>Carina Corredera</sub>](https://github.com/cari-corredera)
+
+
 
 [<img src="https://avatars.githubusercontent.com/u/114626233?s=400&u=dd2604a961ab0af784111b5f02e838c01cf1ee4e&v=4" width=80><br><sub>Luma2001</sub>](https://github.com/Luma2001) 
 
