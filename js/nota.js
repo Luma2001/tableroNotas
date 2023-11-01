@@ -1,4 +1,7 @@
+
+
 const nota = {
+    
 
     agregar: () => {
 
@@ -305,6 +308,11 @@ const nota = {
         idTarea = JSON.parse(localStorage.getItem('idTarea')??0);
         //console.log(idTarea);
     },
+
+    
+
+
+
 
     
 }
