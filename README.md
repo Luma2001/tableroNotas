@@ -15,9 +15,7 @@ Cada nota puede pasar por 3 estados.<br>
 <p>Hemos establecido un límite de 4 tareas por realizar. La app no permite agregar más de 4 tareas en el To Do List.<br>
 Debiendo pasar una nota a Checked List para poder agregar más.</p>  
 
-![image](https://github.com/Luma2001/tableroNotas/assets/114626233/df67abba-7ca8-42a6-a451-e70d24849272)
-
-
+![Screenshot 2023-11-01 at 17-14-30 Tablero de Notas](https://github.com/Luma2001/tableroNotas/assets/114626233/6f3a0a3c-9173-4002-9e33-6f1fe54fcd2f)
 
 
 <h4>Ingreso de datos:</h4>
@@ -48,7 +46,7 @@ https://pizarranotas.netlify.app/
 <p>HTML,CSS y JAVASCRIPT</p>
 <h3>Desarrolladoras del Proyecto:</h3>
 
-[![114364057](https://github.com/Luma2001/tableroNotas/assets/114626233/9ad58cc2-dc78-4722-a0d6-5b1d5978a1ce)
+[![caricorre](https://github.com/Luma2001/tableroNotas/assets/114626233/99494a89-9177-4bda-bf9e-a90fd9f12e36)
 <br><sub>Carina Corredera</sub>](https://github.com/cari-corredera)
 
 
