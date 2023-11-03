@@ -1,0 +1,27 @@
+/*HISTORIAL*/
+#panelHistorial{
+    top: 20px;
+    margin: auto;
+    padding: 1em;
+    bottom: 30px;
+    width: 80%;
+    height: 400px;
+    color:#1c1a1a;
+    background: white;
+    overflow: hidden;
+    overflow-y: scroll;
+    background-image: none;
+    box-shadow: 5px 5px 5px;
+    box-sizing: border-box;
+    object-fit: contain;
+}
+
+
+.tareasArchivadas{
+    margin-left: 2em;
+    font-family:var(--font-lato);
+    text-align: left;
+}
+
+
+

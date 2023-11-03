@@ -1,0 +1,57 @@
+
+/*ESTILOS PARA NOTAS CREADAS*/
+.tarea{
+    display: flex;          
+    flex-direction: column;               
+    justify-content: start;
+    position: relative;
+    width: 180px;
+    min-height: 180px;
+    max-height: 210px;
+    
+    margin-right: 10px;
+    margin-top: 15px;
+    margin-bottom: 5px;
+    border: 2px;
+    word-wrap: break-word; /*para evitar desbordamiento de texto en las notas*/
+    background-color: rgb(252, 252, 120);
+    box-shadow: 5px 5px 15px black;
+    text-align: center;
+    padding: 2.5em;
+}
+
+
+.clip {
+    position: absolute;
+    top: 0px; 
+    left: 45%; 
+    filter: drop-shadow(2px 1px px rgb(40, 38, 38));
+}
+
+.tituloTarea, .descripcion{ 
+   text-align: center;
+  
+}
+
+.checked, .edit, .delete{
+    background: none;
+    position: absolute;
+    left: 138px;
+    width: 40px;
+    bottom: 2px;          
+    border: none;
+    filter:drop-shadow(1px 2px 1px rgb(56, 55, 55));
+}
+
+.edit{
+    left:2px;
+}
+
+.delete{
+    top: 2px;
+    bottom: 150px;
+}
+
+.checked img, .edit img, .delete img{
+    width: 30px;     
+}

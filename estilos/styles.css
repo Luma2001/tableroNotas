@@ -1,6 +1,11 @@
 @import url("https://fonts.googleapis.com/css?family=Roboto+Slab:100,300,400,700");
 @import url("https://fonts.googleapis.com/css?family=Raleway:300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i");
+@import url(header.css);
+@import url(historial.css);
+@import url(tablero.css);
+@import url(notas.css);
 @import url(prompt.css);
+
 
 :root {
     --font-raleway: "Raleway", sans-serif;
@@ -12,8 +17,8 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;/*como va a calcular el tamaño del elemento, en el width y height que le demos va a incluir a las medidas de su margin y padding*/
-   
 }
+
 
 body{
     display: flex;
@@ -21,12 +26,14 @@ body{
     align-items: center;
     text-align: center;
     height: 100vh;
-    background: url(../img/fondoA.jpg) center/cover;
+    background: url(../img/fondo.PNG) center/cover;
     font-family: var(--font-raleway);
 
 }
+
+
 #marco{
-    max-width: 60%;
+    max-width: 90%;
     padding-bottom: 25px;
     background-color: rgb(212, 125, 56);
     border-radius: 20px;
@@ -37,249 +44,70 @@ body{
 }
 
 
-
-
-/*HEADER INCLUYE TITULO, TEXTAREAS Y BOTON DE AGREGAR*/
-header h1, h3{
-    margin: 0.5em;
-    color:rgb(252, 252, 120);
-    font-weight: bolder;
-    text-shadow: 1px 1px 2px grey;
-}
-
-h3{
-   margin:1.5em; 
-}
-
-header nav{
-    
+main{
     display: flex;
-    width:100%;
     flex-direction: row;
     flex-wrap: nowrap;
-    justify-content: center;
-    align-items: center;
-    margin-bottom: 1%;
-    
 }
 
-textarea::placeholder {
-    padding-left: 10px;
-}
 
-#nuevaTarea, #nuevaDescripcion {
-    /*background: rgb(212, 125, 56);*/
-    /*box-shadow: 5px 5px 7px rgb(252, 252, 120), -5px -5px 7px rgb(252, 252, 120);*/
-    font-size: medium;
-    line-height: 2em;
-    width: 30%;
-    padding-left: 10px;
-    font-family: var(--font-raleway);
-}
-
-#nuevaDescripcion{
-    width: 60%;
-}
-
-header button{
-    background: white;
-    border: none;
-    border-radius: 10px;
-    box-shadow: 2px 2px 5px black;
-    margin: 0%;
-    margin-right: 10px;
-}
-
-header button img{
-    width: 40px;        
-}
-
-#btnClear{
-    object-fit: contain;
-    height: 48px;
+h4,p{
     font-size: 1em;
-    background-color: rgb(252, 252, 108);
-    border: 2px solid rgb(212, 125, 56);
-    border-radius: 5px;
-    margin: .8em 0 .8em 0;
-    padding: 0.2em;
-    transition: all .2s;
-    color: rgb(212, 125, 56);
 }
 
-#btnClear:hover {
+
+button:hover {
 transform: scale(.9);
 }
 
 
-
-/*MAIN: INCLUYE TABLERO TO DO LIST, CHECKED LIST e HISTORIAL*/
-#tablero{
-    display: flex;
-    flex-direction: column;
-    flex-wrap:wrap;
-    background: url(../img/tableroFondo.JPG) center;
-    max-width: 95%;
-    min-height: 500px; 
-    border: 20px solid rgb(117, 60, 17);
-    border-radius: 20px;
-    margin: auto; 
-    box-shadow: 5px 5px 5px; 
-    box-sizing:border-box;
-    
-}
-#estadoNotas{
-    width: 100%;
-    display: flex;
-    justify-content: space-around;
-}
-.imgTitulo{
-    width: 200px;
-    height: 80px;
-    margin-left: 100px;
-    margin-right: 100px;
-}
-
-#contenedorNotas{
-    width: 100%;
-    display: flex;
-    flex-direction: row;
-    flex-wrap:nowrap;
-}
-
-#todoList, #checkedList{
-width: 500px;    
-margin-top: 20px; 
-margin-left: auto;
-display: flex;
-flex-direction: row;
-flex-wrap: wrap;
-justify-content: center;
-padding-bottom: 1em;
-}
-
-
-
-
-/*ESTILOS PARA NOTAS CREADAS*/
-.tarea{
-    display: flex;          
-    flex-direction: column;               
-    justify-content:start;
-    position: relative;
-    width: 180px;
-    min-height: 180px;
-    max-height: 210px;
-    
-    margin-right: 10px;
-    margin-top: 15px;
-    margin-bottom: 5px;
-    border: 2px;
-    word-wrap:break-word; /*para evitar desbordamiento de texto en las notas*/
-    background-color: rgb(252, 252, 120);
-    box-shadow: 5px 5px 15px black;
-    text-align: center;
-    padding: 2.5em;
-}
-
-
-.clip {
-    position: absolute;
-    top: 0px; 
-    left: 45%; 
-    filter: drop-shadow(2px 1px px rgb(40, 38, 38));
-}
-
-.tituloTarea, .descripcion{ 
-   padding-top: 1px;
-   padding-left: 15px;
-  
-}
-
-.checked, .edit, .delete{
-    background: none;
-    position: absolute;
-    left: 138px;
-    width: 40px;
-    bottom: 2px;          
-    border: none;
-    filter:drop-shadow(1px 2px 1px rgb(56, 55, 55));
-}
-
-.edit{
-    left:2px;
-}
-
-.delete{
-    top: 2px;
-    bottom: 150px;
-}
-
-.checked img, .edit img, .delete img{
-    width: 30px;     
-}
-
-/*HISTORIAL*/
-#panelHistorial{
-    top: 20px;
-    margin: auto;
-    padding: 1em;
-    bottom: 30px;
-    width: 95%;
-    height: 150px;
-    color:#1c1a1a;
-    background: white;
-    overflow: hidden;
-    overflow-y: scroll;
-    background-image: none;
-    box-shadow: 5px 5px 5px;
-    box-sizing: border-box;
-    object-fit: contain;
-}
-
-
-.tareasArchivadas{
-    margin-left: 100px;
-    font-family:Verdana, Geneva, Tahoma, sans-serif ;
-    text-align: left;
-}
-
-
-
-
 /*Diseño Responsive*/
-@media (max-width: 1056px) {
-    .imgTitulo{
-        width: 200px;
-        height: 100px;
-        margin-left: 50px;
-        margin-right: 50px;
-    }
-}
 
 @media (max-width: 806px) {
     .imgTitulo{
-        width: 200px;
-        height: 100px;
-        margin-left: 20px;
-        margin-right: 20px;
+        width: 50%;
+        margin-left: 0.2em;
+        margin-right: 0.2em;
     }
 }
 
 @media (max-width: 655px) {
-    .imgTitulo{
-        width: 180px;
-        height: 80px;
-        margin-left: 5px;
-        margin-right: 5px;
+    
+    header nav{
+    
+        flex-direction: column;
+        
+    }
+
+    #nuevaTarea, #nuevaDescripcion {
+       
+        width: 100%;
+       
+    }
+
+    main{
+        flex-direction: column;
+    }
+
+    #tablero{
+        max-width: 90%;   
+    }
+
+    #contenedorNotas{
+       flex-direction: column;
+        
+    }
+
+    #panelHistorial{
+        height: 100px;
+        
     }
 }
 
 @media (max-width: 564px) {
     .imgTitulo{
-        width: 100px;
-        height: 50px;
-        margin-left: 20px;
-        margin-right: 20px;
+        width: 50%;
+        margin-left: 0.2em;
+        margin-right: 0.2em;
     }
 }

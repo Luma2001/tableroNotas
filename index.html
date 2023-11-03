@@ -6,7 +6,7 @@
     <link rel="stylesheet" href="./estilos/styles.css">
     <script src="./js/utils.js" defer></script>
     <script src="./js/nota.js" defer></script>
-    <script src="./js/script.js" defer></script>
+    <script src="./js/index.js" defer></script>
     <title>Tablero de Notas</title>
 </head>
 
@@ -16,25 +16,31 @@
         <header>
             <h1>TABLERO DE NOTAS</h1>
             <nav>
-                <div><textarea name="titulo" id="nuevaTarea" cols="10" rows="1" placeholder="Título Tarea"></textarea><textarea name="descripcion" id="nuevaDescripcion" cols="50" rows="1" placeholder="Descripción breve de tarea"></textarea></div>
-                <div>
-                    <button id="agregar" onclick="nota.agregar()"><img src="./iconos/add.png" alt="add task"></button>
-                </div>
-                <div>
-                    <button id="btnClear" onclick="util.clear()">Limpiar</button>
+                <div style="width: 70%; "><input name="titulo" id="nuevaTarea" placeholder="Título Tarea"></input><input name="descripcion" id="nuevaDescripcion" placeholder="Descripción breve de tarea"></input></div>
+                <div id="contenedorBtnHeader">
+                    <div><button id="agregar" onclick="nota.agregar()"><img src="./iconos/add.png" alt="add task"></button></div>
+                    <div><button id="btnClear" onclick="util.clear()">Limpiar</button></div>        
                 </div>
             </nav>
         </header>
         
         <main>
             <section id="tablero">
-                <div id="estadoNotas">
-                    <img class="imgTitulo" src="./img/tituloToDoList.JPG" alt="TO DO LIST">
-                    <img class="imgTitulo" src="./img/tituloCheckedList.JPG" alt="CHECKED LIST">
-                </div>
+                
                 <div id="contenedorNotas">
-                    <div id="todoList"></div>
-                    <div id="checkedList"></div>
+                    <div>
+                        <div class="estadoNotas">
+                                <img class="imgTitulo" src="./img/tituloToDoList.JPG" alt="TO DO LIST">
+                            </div>
+                        <div id="todoList"></div>
+                    </div>  
+                    <div>  
+                        <div class="estadoNotas">
+                                <img class="imgTitulo" src="./img/tituloCheckedList.JPG" alt="CHECKED LIST">
+                        </div>
+                        <div id="checkedList"></div>
+                    </div>
+
                 </div>
             </section>
             

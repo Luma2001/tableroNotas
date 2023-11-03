@@ -1,7 +1,7 @@
 
 
 
-//Capturo los elementos que recibirán la respuesta
+//Capturo los elementos que recibirán las respuestas
     const toDoContainer = document.querySelector("#todoList");
     const checkContainer = document.querySelector("#checkedList");
     const panelhistorial = document.querySelector("#lista");
