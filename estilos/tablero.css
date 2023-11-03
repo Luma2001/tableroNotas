@@ -39,7 +39,8 @@
 }
 
 #todoList, #checkedList{
-max-width: 500px;    
+max-width: 500px;   
+min-width: 300px; 
 margin-top: 20px; 
 margin-left: auto;
 display: flex;
