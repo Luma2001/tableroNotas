@@ -7,19 +7,18 @@
     <script src="./js/utils.js" defer></script>
     <script src="./js/nota.js" defer></script>
     <script src="./js/index.js" defer></script>
-    <title>Tablero de Notas</title>
+    <title>Pizarra de Notas</title>
 </head>
 
 <body onload="nota.cargar()">
    <div id="marco">
         
         <header>
-            <h1>TABLERO DE NOTAS</h1>
+            <h1>PIZARRA DE NOTAS</h1>
             <nav>
                 <div style="width: 70%; "><input name="titulo" id="nuevaTarea" placeholder="Título Tarea"></input><input name="descripcion" id="nuevaDescripcion" placeholder="Descripción breve de tarea"></input></div>
                 <div id="contenedorBtnHeader">
-                    <div><button id="agregar" onclick="nota.agregar()"><img src="./iconos/add.png" alt="add task"></button></div>
-                    <div><button id="btnClear" onclick="util.clear()">Limpiar</button></div>        
+                    <div><button id="agregar" onclick="nota.agregar()"><img src="./iconos/add.png" alt="Agregar Nota"></button></div>        
                 </div>
             </nav>
         </header>
@@ -49,6 +48,7 @@
                 <div id="panelHistorial">
                     <ul id="lista"></ul>
                 </div>
+                <div><button id="btnClear" onclick="util.clear()">Limpiar</button></div>
             </section>
         </main>
 

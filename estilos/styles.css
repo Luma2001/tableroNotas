@@ -10,6 +10,9 @@
 :root {
     --font-raleway: "Raleway", sans-serif;
     --font-lato: "Lato", sans-serif;
+    --color-amarillo:rgb(252, 252, 120);
+    --color-marronOscuro:rgb(117, 60, 17);
+    --color-marronClaro:rgb(212, 125, 56);
 }
 
 
@@ -34,8 +37,10 @@ body{
 
 #marco{
     max-width: 90%;
-    padding-bottom: 25px;
-    background-color: rgb(212, 125, 56);
+    padding-bottom: 5em;
+    padding-left: 2em;
+    padding-right: 2em;
+    background-color: var(--color-marronClaro);
     border-radius: 20px;
     align-items: center;
     justify-content: center;
@@ -65,22 +70,20 @@ transform: scale(.9);
 
 @media (max-width: 806px) {
     .imgTitulo{
-        width: 50%;
+        width: 40%;
         margin-left: 0.2em;
         margin-right: 0.2em;
     }
 }
 
-@media (max-width: 655px) {
+@media (max-width: 700px) {
     
     header nav{
-    
         flex-direction: column;
         
     }
 
     #nuevaTarea, #nuevaDescripcion {
-       
         width: 100%;
        
     }

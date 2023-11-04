@@ -7,8 +7,8 @@
   margin: auto;
   width: 25em;
   height: 12em;
-  background-color:rgb(212, 125, 56);
-  border: 7px solid rgb(252, 252, 108);
+  background-color:var(--color-marronClaro);
+  border: 7px solid var(--color-amarillo);
   border-radius: 4px;
   box-shadow: 4px 4px 4px 5px rgb(25, 24, 24);
 
@@ -23,7 +23,7 @@
 .prompt p{
   padding: 1.5em;
   text-align: center;
-  color: rgb(252, 252, 108);
+  color: var(--color-amarillo);
   font-weight: bolder;
   font-size: 1.4em;
   text-shadow: 1px 1px 2px black;
@@ -32,7 +32,7 @@
 .prompt button{
   width: 40%;
   font-size: 1.5em;
-  background-color: rgb(252, 252, 108);
+  background-color: var(--color-amarillo);
   border: 3px solid black;
   border-radius: 5px;
   margin-top: 0.3em;

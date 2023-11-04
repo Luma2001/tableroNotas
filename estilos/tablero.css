@@ -11,7 +11,7 @@
     background: url(../img/tableroFondo.JPG) center;
     max-width: 70%;
     min-height: 500px; 
-    border: 20px solid rgb(117, 60, 17);
+    border: 20px solid var(--color-marronOscuro);
     border-radius: 20px;
     margin: auto; 
     box-shadow: 5px 5px 5px; 
@@ -35,12 +35,13 @@
     width: 100%;
     display: flex;
     flex-direction: row;
-    flex-wrap:nowrap;
+    flex-wrap: nowrap;
 }
 
 #todoList, #checkedList{
 max-width: 500px;   
 min-width: 300px; 
+min-height: 200px;
 margin-top: 20px; 
 margin-left: auto;
 display: flex;
