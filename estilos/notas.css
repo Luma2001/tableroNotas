@@ -17,7 +17,7 @@
     background-color:var(--color-amarillo);
     box-shadow: 5px 5px 15px black;
     text-align: center;
-    padding: 2.5em;
+    padding-top: 2.5em;
 }
 
 
@@ -34,12 +34,13 @@
 }
 
 .checked, .edit, .delete{
-    background: none;
+    background: white;
     position: absolute;
     left: 138px;
     width: 40px;
     bottom: 2px;          
     border: none;
+    border-radius: 30%;
     filter:drop-shadow(1px 2px 1px rgb(56, 55, 55));
 }
 
