@@ -67,8 +67,6 @@ transform: scale(.9);
 
 
 /*Diseño Responsive*/
-
-
 @media (max-width: 1000px) {
     
     header nav{

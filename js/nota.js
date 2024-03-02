@@ -1,7 +1,6 @@
 
 
 const nota = {
-    
 
     agregar: () => {
 
@@ -347,6 +346,5 @@ const nota = {
         console.log('tareaCounter');
     },
 
-    
-    
-}
+ 
+}//Fin objeto nota

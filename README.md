@@ -1,5 +1,5 @@
 <em>#tableroNotas</em><br>
-
+<br>
 <h1 align="center">PIZARRA PARA ANOTACIONES RÁPIDAS</h1>
 <p>Desafío presentado en Prácticas de Javascript<br>
 Desarrollar un app de notas.<br></p>
@@ -25,7 +25,7 @@ Debiendo pasar una nota a Checked List para poder agregar más.</p>
 
 <p>1) El usuario debe completar las casillas para el título y la descripción de la nota.<br>
   2) Presionar el botón más.<br>
-Importante: ambas casillas deben estar completas o sino no se podrá crear la nota.<br>
+Importante: ambas casillas deben ser completadas o sino no se podrá crear la nota.<br>
   La app lanza una advertencia si una o ambas casillas están vacía.</p>
   
   ![image](https://github.com/Luma2001/tableroNotas/assets/114626233/c9a09225-0460-4c64-88b1-769d775b3938)
@@ -43,13 +43,13 @@ https://github.com/Luma2001/tableronotas.git
 https://pizarranotas.netlify.app/
 
 <h3>Tecnologías Utilizadas:</h3>
-<p>HTML,CSS y JAVASCRIPT</p>
+<p>HTML5, CSS3 y JAVASCRIPT</p>
 <h3>Desarrolladoras del Proyecto:</h3>
 
-![caricorre](https://github.com/Luma2001/tableroNotas/assets/114626233/d7d7170e-f352-4b51-9dcc-423cb17a68fa)![Luma](https://github.com/Luma2001/tableroNotas/assets/114626233/5c47fe54-a2a5-4897-96a7-69f4366f0187)
-<br>
-[<sub>Carina Corredera</sub>](https://github.com/cari-corredera)            [<sub>Luma2001</sub>](https://github.com/Luma2001) 
-
+<img src="https://github.com/Luma2001/tableroNotas/assets/114626233/d7d7170e-f352-4b51-9dcc-423cb17a68fa"> | <img src="https://github.com/Luma2001/tableroNotas/assets/114626233/5c47fe54-a2a5-4897-96a7-69f4366f0187"> |
+| :------------------------: | :------------------------: |
+| <strong>Carina Corredera</strong> | <strong>Luma2001</strong> |
+<a href="https://github.com/cari-corredera"><img src="./img/github.svg"></a> | <a href="https://github.com/Luma2001"><img src="./img/github.svg"></a> | 
 
 
 

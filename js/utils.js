@@ -6,7 +6,6 @@ const util = {
         document.querySelector("#nuevaDescripcion").value=""; 
     },
     
-    
     //Limpio tablero y localStorage
     clear:()=>{
         
@@ -65,4 +64,4 @@ const util = {
     
     },
    
-}
+}//Fin objeto util
