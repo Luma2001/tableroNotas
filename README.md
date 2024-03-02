@@ -48,8 +48,8 @@ https://pizarranotas.netlify.app/
 
 <img src="https://github.com/Luma2001/tableroNotas/assets/114626233/d7d7170e-f352-4b51-9dcc-423cb17a68fa"> | <img src="https://github.com/Luma2001/tableroNotas/assets/114626233/5c47fe54-a2a5-4897-96a7-69f4366f0187"> |
 | :------------------------: | :------------------------: |
-| <strong>Carina Corredera</strong> | <strong>Luma2001</strong> |
-<a href="https://github.com/cari-corredera"><img src="./img/github.svg"></a> | <a href="https://github.com/Luma2001"><img src="./img/github.svg"></a> | 
+| <strong>Carina Corredera</strong> |  <strong>Luma2001</strong> |
+<a href="https://github.com/cari-corredera"><img src="./img/github.svg"></a> |  <a href="https://github.com/Luma2001">  <img src="./img/github.svg"></a> | 
 
 
 
