@@ -5,9 +5,9 @@
     padding: 1em;
     bottom: 30px;
     width: 80%;
-    height: 400px;
-    color:#1c1a1a;
-    background: white;
+    height: 350px;
+    color:var(--color-texto);
+    background: var(--color-claro);
     overflow: hidden;
     overflow-y: scroll;
     background-image: none;
